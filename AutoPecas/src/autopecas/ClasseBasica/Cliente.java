@@ -5,6 +5,8 @@
  */
 package autopecas.ClasseBasica;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author NeGo
@@ -13,25 +15,17 @@ public class Cliente {
     
     private String nome;
     private Integer cpf;
-    private Integer modelo;
-    private String veiculo;
-    private String cor;
+    private ArrayList<Veiculo> listVeiculo;
 
     
     // Criando Construtor
     //
-    public Cliente (String nome,Integer cpf,Integer modelo,String veiculo,String cor){
+    public Cliente (String nome,Integer cpf, ArrayList<Veiculo> listVeiculo){
         this.nome = nome;
-        this.modelo = modelo;
-        this.veiculo = veiculo;
         this.cpf = cpf;
+        this.listVeiculo =listVeiculo;
         
     }
-    
-    
-    ///
-    
-    
     
     /**
      * @return the nome
@@ -62,49 +56,19 @@ public class Cliente {
     }
 
     /**
-
-
-    /**
-     * @return the veiculo
+     * @return the listVeiculo
      */
-    public String getVeiculo() {
-        return veiculo;
+    public ArrayList<Veiculo> getListVeiculo() {
+        return listVeiculo;
     }
 
     /**
-     * @param veiculo the veiculo to set
+     * @param listVeiculo the listVeiculo to set
      */
-    public void setVeiculo(String veiculo) {
-        this.veiculo = veiculo;
+    public void setListVeiculo(ArrayList<Veiculo> listVeiculo) {
+        this.listVeiculo = listVeiculo;
     }
 
-    /**
-     * @return the cor
-     */
-    public String getCor() {
-        return cor;
-    }
-
-    /**
-     * @param cor the cor to set
-     */
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
-
-    /**
-     * @return the modelo
-     */
-    public Integer getModelo() {
-        return modelo;
-    }
-
-    /**
-     * @param modelo the modelo to set
-     */
-    public void setModelo(Integer modelo) {
-        this.modelo = modelo;
-    }
 
 
 
