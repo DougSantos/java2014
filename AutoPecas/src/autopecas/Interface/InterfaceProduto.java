@@ -6,6 +6,8 @@
 package autopecas.Interface;
 
 import autopecas.ClasseBasica.Produto;
+import autopecas.Exception.ProdutoException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -14,10 +16,10 @@ import java.util.ArrayList;
  */
 public interface InterfaceProduto {
     
-    public void cadastrar(Produto p);
-    public void atualizar(Produto p);
-    public void remover (Produto p);
-    ArrayList<Produto> Listar();
-    ArrayList<Produto> Consultar();
+    public void cadastrar(Produto p) throws SQLException,Exception,ProdutoException;
+    public void atualizar(Produto p)throws SQLException,Exception,ProdutoException;
+    public void remover (Produto p)throws SQLException,Exception,ProdutoException;
+    ArrayList<Produto> Listar() throws SQLException,Exception,ProdutoException;
+    ArrayList<Produto> Consultar(Integer codigoProduto) throws SQLException,Exception,ProdutoException;
     
 }
