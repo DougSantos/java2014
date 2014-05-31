@@ -6,6 +6,8 @@
 package autopecas.Interface;
 
 import autopecas.ClasseBasica.Cliente;
+import autopecas.Exception.ClienteException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -14,9 +16,9 @@ import java.util.ArrayList;
  */
 public interface InterfaceCliente {
     
-    public void cadastrar();
-    public void atualizar();
-    public void remover ();
-    ArrayList<Cliente> Listar();
-    ArrayList<Cliente > Consultar();
+    public void cadastrar() throws SQLException,Exception,ClienteException;
+    public void atualizar() throws SQLException,Exception,ClienteException;
+    public void remover ()throws SQLException,Exception,ClienteException;
+    ArrayList<Cliente> Listar() throws SQLException,Exception,ClienteException;
+    ArrayList<Cliente > Consultar(Integer cpf) throws SQLException,Exception,ClienteException;
 }
